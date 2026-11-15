@@ -60,7 +60,7 @@ button { font: inherit; }
 .button-primary span { color: var(--lime); }
 .button-ghost:hover { background: var(--white); }
 
-.profile-visual { position: relative; width: min(100%, 490px); justify-self: end; padding: 0 0 48px 24px; }
+.profile-visual { position: relative; width: min(100%, 490px); justify-self: end; padding-left: 24px; }
 .portrait-frame { position: relative; height: clamp(420px, 43vw, 540px); overflow: hidden; background: #dfe3ea; border: 1px solid #c9d1dc; box-shadow: 10px 10px 0 #dbe4f2; }
 .portrait-frame::after { content: ""; position: absolute; inset: 0; border: 14px solid rgba(255,255,255,.18); pointer-events: none; }
 .portrait-frame > img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 24%; filter: saturate(.88) contrast(1.03); }
@@ -79,7 +79,7 @@ button { font: inherit; }
 .education-score strong, .education-score span { display: block; }
 .education-score strong { color: var(--lime); font-size: 27px; line-height: 1; letter-spacing: -.05em; }
 .education-score span { margin-top: 5px; color: #89929e; font: 8px var(--mono); }
-.current-role-spotlight { position: absolute; left: 0; right: -18px; bottom: 0; z-index: 2; display: grid; grid-template-columns: 64px 1fr; align-items: center; gap: 16px; padding: 15px 18px; background: var(--ink); color: var(--white); border: 1px solid #303946; box-shadow: 7px 7px 0 #cbd5e1; }
+.current-role-spotlight { position: relative; display: grid; grid-template-columns: 64px 1fr; align-items: center; gap: 16px; margin: 14px 0 0 -24px; padding: 15px 18px; background: var(--ink); color: var(--white); border: 1px solid #303946; box-shadow: 7px 7px 0 #cbd5e1; }
 .current-company-logo { width: 58px; height: 58px; overflow: hidden; background: var(--white); }
 .current-company-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .current-role-copy span { display: block; color: var(--lime); font: 8px var(--mono); letter-spacing: .05em; text-transform: uppercase; }
@@ -333,7 +333,7 @@ footer a { color: var(--lime); }
   .profile-visual { width: 100%; padding: 0; }
   .portrait-frame { height: min(108vw, 480px); box-shadow: 8px 8px 0 #dbe4f2; }
   .education-spotlight { position: relative; left: auto; right: auto; bottom: auto; grid-template-columns: 60px 1fr auto; gap: 12px; margin: 18px 0 0; padding: 14px; box-shadow: 7px 7px 0 var(--lime); }
-  .current-role-spotlight { position: relative; left: auto; right: auto; bottom: auto; margin-top: 14px; box-shadow: none; }
+  .current-role-spotlight { position: relative; left: auto; right: auto; bottom: auto; margin: 14px 0 0; box-shadow: none; }
   .university-logo { width: 54px; height: 54px; }
   .university-logo img { width: 48px; height: 48px; }
   .education-copy strong { font-size: 13px; }
