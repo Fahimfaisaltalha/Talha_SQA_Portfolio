@@ -57,6 +57,27 @@ button { font: inherit; }
 .button-primary span { color: var(--lime); }
 .button-ghost:hover { background: var(--white); }
 
+.profile-visual { position: relative; width: min(100%, 620px); justify-self: end; padding: 0 0 58px 42px; }
+.portrait-frame { position: relative; height: clamp(510px, 55vw, 690px); overflow: hidden; background: #dfe3ea; border: 1px solid var(--ink); box-shadow: 18px 18px 0 var(--blue); }
+.portrait-frame::after { content: ""; position: absolute; inset: 0; border: 14px solid rgba(255,255,255,.18); pointer-events: none; }
+.portrait-frame > img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 24%; filter: saturate(.88) contrast(1.03); }
+.portrait-index { position: absolute; top: 18px; right: 18px; padding: 8px 10px; background: var(--ink); color: var(--lime); font: 9px var(--mono); letter-spacing: .08em; }
+.portrait-label { position: absolute; right: 18px; bottom: 18px; padding: 10px 13px; background: rgba(252,250,246,.92); border: 1px solid var(--ink); text-align: right; }
+.portrait-label span, .portrait-label strong { display: block; }
+.portrait-label span { color: var(--muted); font: 8px var(--mono); text-transform: uppercase; }
+.portrait-label strong { font-size: 11px; margin-top: 2px; }
+.education-spotlight { position: absolute; left: 0; right: -28px; bottom: 0; z-index: 2; display: grid; grid-template-columns: 78px 1fr auto; align-items: center; gap: 18px; padding: 17px 20px; background: var(--ink); color: var(--white); border: 1px solid #303946; box-shadow: 9px 9px 0 var(--lime); }
+.university-logo { width: 70px; height: 70px; display: grid; place-items: center; background: var(--white); }
+.university-logo img { width: 61px; height: 61px; object-fit: contain; }
+.education-copy { min-width: 0; }
+.education-label { display: block; margin-bottom: 5px; color: var(--lime); font: 8px var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+.education-copy strong { display: block; font-size: clamp(13px, 1.25vw, 17px); line-height: 1.18; }
+.education-copy p { margin: 5px 0 0; color: #a9b1bc; font: 9px var(--mono); }
+.education-score { padding-left: 18px; border-left: 1px solid #3a4450; text-align: center; }
+.education-score strong, .education-score span { display: block; }
+.education-score strong { color: var(--lime); font-size: 27px; line-height: 1; letter-spacing: -.05em; }
+.education-score span { margin-top: 5px; color: #89929e; font: 8px var(--mono); }
+
 .hero-visual { background: var(--ink); color: var(--white); border: 1px solid #2b3441; box-shadow: 18px 18px 0 var(--blue); transform: rotate(1.5deg); }
 .visual-topbar, .visual-footer { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid #2d3540; font: 10px var(--mono); letter-spacing: .08em; }
 .visual-online { color: var(--lime); }
@@ -221,6 +242,7 @@ footer a { color: var(--lime); }
   .mobile-menu a { padding: 13px 0; border-bottom: 1px solid var(--line); font-weight: 800; }
   .hero-grid, .intro-grid, .project-featured, .skills-layout { grid-template-columns: minmax(0, 1fr); }
   .hero-grid { padding-top: 60px; }
+  .profile-visual { width: min(92%, 620px); justify-self: center; margin: 10px auto 20px; }
   .hero-visual { max-width: 660px; width: 90%; margin: 10px auto 20px; }
   .intro-grid, .skills-layout { gap: 50px; }
   .project-featured .project-art { min-height: 440px; }
@@ -240,6 +262,15 @@ footer a { color: var(--lime); }
   .hero h1 em::after { height: 5px; }
   .hero-actions { display: grid; }
   .hero-visual { width: calc(100% - 14px); box-shadow: 10px 10px 0 var(--blue); }
+  .profile-visual { width: 100%; padding: 0; }
+  .portrait-frame { height: min(118vw, 590px); box-shadow: 10px 10px 0 var(--blue); }
+  .education-spotlight { position: relative; left: auto; right: auto; bottom: auto; grid-template-columns: 60px 1fr auto; gap: 12px; margin: 18px 0 0; padding: 14px; box-shadow: 7px 7px 0 var(--lime); }
+  .university-logo { width: 54px; height: 54px; }
+  .university-logo img { width: 48px; height: 48px; }
+  .education-copy strong { font-size: 13px; }
+  .education-copy p { font-size: 8px; }
+  .education-score { padding-left: 12px; }
+  .education-score strong { font-size: 22px; }
   .visual-score { gap: 22px; padding: 25px 18px; }
   .score-ring { width: 100px; border-width: 9px; }
   .visual-score strong { font-size: 24px; }
